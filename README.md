@@ -3,6 +3,15 @@
 ## About
 Applikation soll es den Helfern und Organisationen erleichtern gezielt Spenden zu sammeln und gebündelt in kurzer Zeit Aufrufe zu starten was genau wo benötigt wird. 
 
+## Install
+````
+$ git clone https://github.com/zoepage/donate_right_now.git
+$ cd donate_right_now
+$ npm install
+$ hoodie start
+````
+
+
 ## Features
 - create item / helper request*
 - edit item / helper request*
