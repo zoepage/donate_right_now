@@ -23,7 +23,7 @@ Applikation soll es den Helfern und Organisationen erleichtern gezielt Spenden z
 - Bootstrap
 
 ## Flow
-![Flow of application](/src/img/flow.jpg)
+![Flow of application](/assets/img/flow.jpg)
 
 ## JSON
 ````
