@@ -1,19 +1,126 @@
-.container {
-  margin-top: 40px;
+/* ==========================================================================
+   Fonts
+   ========================================================================== */
+
+@font-face {
+  font-family: 'Montserrat-UltraLight';
+  src: url('../fonts/Montserrat-UltraLight.otf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Montserrat-Light';
+  src: url('../fonts/Montserrat-Light.otf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Pacifico';
+  src: url('../fonts/Pacifico.ttf') format('truetype');
+}
+
+/* ==========================================================================
+   Layout
+   ========================================================================== */
+body .container {
+  font-family: "Montserrat-Light";
+}
+
+body.bg1 {
+  background: #fff url("../img/4.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Pacifico";
+  text-align: center;
+}
+
+.column, .columns {
+  margin-left: 0%;
+  padding: 0 0;
+  font-size: 1.1em;
+  line-height: 1.7em;
+}
+
+.column .row, .columns .row {
+  padding: 5% 10%; 
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.sixteen {
+  margin-bottom: 60px;
 }
 
 #login-bar {
   float: right;
+  background: none;
+  padding: 2% 10% 0 0;
+}
+
+.logo h1 {
+  color: #fff;
+  font-size: 6em;
+  margin-top: 0.4em;
+  margin-bottom: 2em;
+  text-shadow: 2px 2px rgba(128, 128, 128, 0.3);
+}
+
+footer.row {
+  background: none !important;
+  color: #fff;
 }
 
   #login-bar li {
     display: inline-block; 
   }
 
-    #login-bar li:last-child {
-      padding-left: 8px;
-      border-left: 1px solid #ccc;
-    }
 .hide {
   display: none !important;
 }
+
+.r {
+  float: right;
+}
+
+.l {
+  float: left;
+}
+
+.button.button-primary a {
+  color: #fff !important;
+  font-weight: 400;
+  text-decoration: none;
+}
+
+/* Portrait and Landscape */
+@media only screen and (max-device-width: 600px) {
+}
+
+.login .row .row {
+  background-color: transparent;
+}
+
+.login .row:first-child {
+  padding: 5% 10% 0;
+}
+
+.login .row {
+  padding: 0 10%;
+}
+
+.login .row:last-child {
+  padding: 0 10% 5%;
+}
+
+.item-list li {
+  list-style: none;
+  padding: 1% 2%;
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+.item-list li:nth-child(even) {
+  background-color: rgba(128, 128, 128, 0.2);
+}
+

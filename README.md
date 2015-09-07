@@ -1,38 +1,57 @@
-# Boilerplate for new Hoodie App
+# Donate Right!
 
-You can start to build your (mobile) app in a fingersnap.
+## About
+Applikation soll es den Helfern und Organisationen erleichtern gezielt Spenden zu sammeln und gebündelt in kurzer Zeit Aufrufe zu starten was genau wo benötigt wird. 
+
+## Features
+- create item / helper request*
+- edit item / helper request*
+- delete item / helper request*
+- publish request*
+- show list of published items / helpers on index
+- show list of items / helpers published by user after login
+- filter list by category / location
+- signin / signup / signout
+
+*after login
 
 
+## Technology
+- HTML5, CSS3, JS (ES5)
+- AngularJS
+- Hoodie
+- Bootstrap
 
-## Installation
+## Flow
+![Flow of application](/src/img/flow.jpg)
 
-`$ hoodie new appName -t "hoodiehq/hoodie-app-skeleton" `
+## JSON
+````
+item: {
+  [
+    name: String,
+    due: Date,
+    quantity: init,
+    location: String,
+    urgent: init (1 - 5, 5 mostly urgent),
+    category: String,
+    by: hoodie.account.usr,
+    created_on: Date,
+    add_info: String
+  ]
+},
+helper: {
+  [
+    work: String,
+    from: Date,
+    to: Date,
+    quantity: init,
+    location: String,
+    urgent: init (1 - 5, 5 mostly urgent),
+    by: hoodie.account.usr,
+    created_on: Date,
+    add_info: String
+  ]
+}
 
-## Browser Support (depending on Hoodie)
-
-+ Firefox (29+)
-+ Chrome (34+)
-+ Desktop Safari (7+)
-+ Internet Explorer 10+
-+ Opera (21+)
-+ Android 4.3+
-+ iOS Safari (7.1+)
-
-## Including
-
-+ jQuery-2.1.0
-+ Skeleton 2.0.4 (http://getskeleton.com/)
-
-index.html
-+ including all (css + js) files you need
-
-main.css
-
-main.js
-+ init hoodie
-
-login.html
-+ small form for login
-
-login.js
-+ hoodie account function already prepeared
+````
