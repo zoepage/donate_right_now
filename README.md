@@ -32,7 +32,7 @@ $ hoodie start
 - Bootstrap
 
 ## Flow
-![Flow of application](/assets/img/flow.jpg)
+![Flow of application](/www/assets/img/flow.jpg)
 
 ## JSON
 ````
