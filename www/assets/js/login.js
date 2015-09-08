@@ -33,18 +33,18 @@ $(function () {
     hoodie.account.signIn(usr, pwd)
     .done(function() {
       if (hoodie.account.username) {
-        location.href = 'index.html';
+        location.href = 'dashboard.html';
       }
     })
     .fail(function() {
       hoodie.account.signUp(usr, pwd, pwd)
         .done(function() {
           if (hoodie.account.username) {
-            location.href = 'index.html';
+            location.href = 'dashboard.html';
           }
         })
         .fail(function() {
-          alert('Your credentials are wrong!');
+          alert('Dein Benutzername / Passwort sind falsch!');
         })
     })
 
