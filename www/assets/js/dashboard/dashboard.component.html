@@ -23,7 +23,7 @@
            <!-- <input type="text" ng-model="newItem.category" />
             <input type="text" ng-model="newItem.add_info" /> -->
 
-            <button ng-click="add(newItem)">Anfrage einstellen</button>
+            <button ng-disabled="addItemForm.$invalid" ng-click="add(newItem);showAddForm=false">Anfrage einstellen</button>
         </form>
     </div>
 
