@@ -1,0 +1,17 @@
+{
+  "name": "donate_right_now",
+  "version": "0.0.1",
+  "homepage": "https://github.com/zoepage/donate_right_now",
+  "authors": [
+    "Robin Böhm <robin.boehm@angularjs.de>"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
