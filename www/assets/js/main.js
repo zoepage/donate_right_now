@@ -9,12 +9,12 @@ hoodie.global.findAll('item')
       console.log(item)
       $('#item-list').append(
         '<li>' + 
-          '<span class="quantity">'+ item.quantity + '</span>' +
-          '<span class="todo">'+ item.name + '</span> im ' +
-          '<span class="location">'+ item.location + '</span> bis ' +
-     //     '<span class="due"> '+ item.quantity +'</span> ' +       
+          '<span class="quantity w-7">'+ item.quantity + '</span>' +
+          '<span class="todo w-20">'+ item.name + '</span> in ' +
+          '<span class="location w-20">'+ item.location + '</span>' +
+          '<span class="due w-20"> '+ item.due +'</span> ' +       
      //     '<span class="category"> '+ item.quantity +'</span> ' +
-          '<span class="urgent">dringend:'+ item.urgent +'</span>' +
+          '<span class="urgent w-7">'+ item.urgent +'</span>' +
         '</li>'
         )
     })    
