@@ -8,21 +8,21 @@
     <div ng-show="showAddForm">
         <form name="addItemForm">
             <!-- TODO: Style -->
-            <input type="number" ng-model="newItem.quantity">
-            Helfer
-            für
-            <input type="text" ng-model="newItem.name">
+            <input type="number" ng-model="newItem.quantity" class="w-7" placeholder="z.B. 2" required />
+            x
+            <input type="text" ng-model="newItem.name" placeholder="Flaschen Wasser 0.5l" required />
             im
-            <input type="text" ng-model="newItem.location">
+            <input type="text" ng-model="newItem.location" placeholder="DKH" required />
             bis
-            <input type="text" ng-model="newItem.due">
-            <br>
+            <input type="text" ng-model="newItem.due" placeholder="heute 19:00" required />
+            <br />
 
 
 
-            <input type="range" ng-model="newItem.urgent" min="1" max="5">
-            <input type="text" ng-model="newItem.category">
-            <input type="text" ng-model="newItem.add_info">
+            <label>Wie dringend?</label><input type="range" ng-model="newItem.urgent" min="1" max="5" required /><br />
+           <!-- <input type="text" ng-model="newItem.category" />
+            <input type="text" ng-model="newItem.add_info" /> -->
+
             <button ng-click="add(newItem)">Anfrage einstellen</button>
         </form>
     </div>
@@ -48,7 +48,9 @@
             <div class="ui-kit r">
                 <span ng-show="!editMode" ng-click="editMode = !editMode" class="ui-icon edit"></span>
                 <span ng-show="!editMode" ng-click="remove(item, $index)" class="ui-icon delete"></span>
+
             </div>
+            <br class="clear" />
         </li>
 
     </ul>

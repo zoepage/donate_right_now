@@ -10,6 +10,7 @@ angular.module('drn.dashboard', ['hoodie'])
 
       $scope.remove = function (item, index) {
         $scope.items.splice(index, 1);
+        hoodie.store.findAll('item');
       };
 
       $scope.add = function (item) {
@@ -23,6 +24,7 @@ angular.module('drn.dashboard', ['hoodie'])
       };
 
       hoodieArray.bind($scope, 'items', 'item');
+      //hoodie.store.findAll('item').publish();
     }
 
 

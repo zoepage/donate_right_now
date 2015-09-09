@@ -131,6 +131,7 @@ footer.row {
   list-style: none;
   padding: 1% 2%;
   background-color: rgba(255, 255, 255, 0.7);
+  min-height: 35px;
 }
 
 .item-list li:nth-child(even) {
@@ -168,6 +169,7 @@ footer.row {
   display: inline-block;
   background: transparent no-repeat center center;
   margin-left: 25%;
+  cursor: pointer;
 }
 
 .add {
@@ -180,4 +182,12 @@ footer.row {
 }
 .delete {
   background-image: url('../img/icons/delete.png');
+}
+
+/* ==========================================================================
+   Form
+   ========================================================================== */
+.w-7 {
+  width: 7%;
+  min-width: 80px;
 }
