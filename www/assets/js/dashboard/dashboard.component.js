@@ -19,7 +19,7 @@ angular.module('drn.dashboard', ['hoodie'])
 
 
       $scope.edit = function (item) {
-        item.editMode = false;
+        $scope.editMode = false;
       };
 
       hoodieArray.bind($scope, 'items', 'item');
