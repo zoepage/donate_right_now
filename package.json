@@ -7,7 +7,8 @@
     "hoodie-plugin-appconfig": "^2.0.1",
     "hoodie-plugin-email": "^1.0.0",
     "hoodie-plugin-users": "^2.2.2",
-    "hoodie-server": "^4.0.2"
+    "hoodie-server": "^4.0.2",
+    "js-yaml": "^3.4.1"
   },
   "scripts": {
     "start": "node node_modules/hoodie-server/bin/start"
