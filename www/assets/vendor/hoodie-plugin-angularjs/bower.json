@@ -1,0 +1,29 @@
+{
+  "name": "hoodie-plugin-angularjs",
+  "homepage": "https://github.com/elmarburke/hoodie-plugin-angularjs",
+  "version": "0.1.1",
+  "description": "This is an AnguarJS Module to provide easy access to the hoodie functions via DI and offer some additional helpers",
+  "keywords": [
+    "hoodie",
+    "angularjs",
+    "nobackend"
+  ],
+  "private": false,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "src",
+    "karma.conf.js",
+    "Gruntfile.coffee"
+  ],
+  "dependencies": {
+    "angular": "^1.2.16",
+    "hoodie": "^0.8.2",
+    "jquery": "^2.1.1"
+  },
+  "devDependencies": {
+    "angular-mocks": "^1.2.16"
+  }
+}

@@ -2,40 +2,41 @@
     <h3>Meine Einträge</h3>
 
     <div class="ui-kit r">
-        <span class="ui-icon add"></span>
+        <span ng-click="showAddForm=!showAddForm" class="ui-icon add"></span>
     </div>
+
+    <div ng-show="showAddForm">
+        <form name="addItemForm">
+            <!-- TODO: Style -->
+            <input type="number" ng-model="newItem.quantity">
+            Helfer
+            für
+            <input type="text" ng-model="newItem.name">
+            im
+            <input type="text" ng-model="newItem.location">
+            bis
+            <input type="text" ng-model="newItem.due">
+            <br>
+
+
+
+            <input type="range" ng-model="newItem.urgent" min="1" max="5">
+            <input type="text" ng-model="newItem.category">
+            <input type="text" ng-model="newItem.add_info">
+            <button ng-click="add(newItem)">Anfrage einstellen</button>
+        </form>
+    </div>
+
     <br class="clear"/>
     <ul class="item-list">
-        <li>
-            <span>2</span> <span>Helfer / aufräumen</span> im <span>DKH</span> bis <span> Montag, 19:00</span>
+        <li ng-repeat="item in items track by $index">
+            <span>{{item.quantity}}</span> <span>Helfer für "{{item.name}}"</span> im <span>{{item.location}}</span> bis <span> {{item.due}}</span>
 
             <div class="ui-kit r">
                 <span class="ui-icon edit"></span>
-                <span class="ui-icon delete"></span>
+                <span ng-click="remove(item, $index)" class="ui-icon delete"></span>
             </div>
         </li>
-        <li>
-            <span>50</span> <span>Plastiklöffel + tiefe Teller</span> im <span>DKH</span> bis
-            <span>Dienstag, 23:00</span>
-        </li>
-        <li>
-            <span>12</span> <span>warme Jacken für Männer, Größe L - XXL</span> im <span>DKH</span> bis <span>Freitag</span>
-        </li>
-        <li>
-            <span>10</span> <span>Bettwäsche</span> im <span>Kreuzviertel</span> bis <span>Freitag, 19:00</span>
-        </li>
-        <li>
-            <span>300</span> <span>Brötchen</span> im <span>Ostkreuz</span> bis <span>sofort</span>
-        </li>
-        <li>
-            <span>14</span> <span>Helfer / sortieren von Kleidung</span> im <span>DKH</span> bis <span>19:00</span>
-        </li>
-        <li>
-            <span>3</span> <span>Helfer / Ärzte</span> im <span>Kreuzviertel</span> von <span> Freitag </span> bis
-            <span>Sonntag</span>
-        </li>
-        <li>
-            <span>30</span> <span>Helfer / Begrüßung</span> im <span>HBF</span> bis <span>23:30</span>
-        </li>
+
     </ul>
 </section>

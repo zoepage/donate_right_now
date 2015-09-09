@@ -1,5 +1,7 @@
 angular.module('drn', [
-  //'hoodie',
+  'hoodie',
 
   'drn.dashboard'
-]);
+]).config(function (hoodieProvider) {
+  hoodieProvider.url('/');
+});
