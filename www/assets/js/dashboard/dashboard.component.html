@@ -30,11 +30,24 @@
     <br class="clear"/>
     <ul class="item-list">
         <li ng-repeat="item in items track by $index">
-            <span>{{item.quantity}}</span> <span>Helfer für "{{item.name}}"</span> im <span>{{item.location}}</span> bis <span> {{item.due}}</span>
+            <span ng-show="!item.editMode">
+                <span>{{item.quantity}}</span> <span>Helfer für "{{item.name}}"</span> im <span>{{item.location}}</span> bis <span> {{item.due}}</span>
+            </span>
+            <span ng-show="item.editMode">
+                <input type="number" ng-model="item.quantity">
+                Helfer
+                für
+                <input type="text" ng-model="item.name">
+                im
+                <input type="text" ng-model="item.location">
+                bis
+                <input type="text" ng-model="item.due">
+                <button ng-click="edit(item,$index)">Anfrage ändern</button>
+            </span>
 
             <div class="ui-kit r">
-                <span class="ui-icon edit"></span>
-                <span ng-click="remove(item, $index)" class="ui-icon delete"></span>
+                <span ng-show="!item.editMode" ng-click="item.editMode = !item.editMode" class="ui-icon edit"></span>
+                <span ng-show="!item.editMode" ng-click="remove(item, $index)" class="ui-icon delete"></span>
             </div>
         </li>
 

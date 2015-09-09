@@ -3,18 +3,6 @@ angular.module('drn.dashboard', ['hoodie'])
 
     function drnDashboardVM ($scope, hoodieArray, hoodieAccount) {
 
-      var mock = {
-        name       : 'aufräumen',
-        due        : 'Montag, 19:00',
-        quantity   : 2,
-        location   : 'DKH',
-        urgent     : 5,
-        category   : 'cat 1',
-        by         : hoodieAccount.username,
-        created_on : new Date(),
-        add_info   : 'Test Add Info'
-      };
-
       var emptyItem = {urgent:1};
 
       $scope.items = [];
@@ -30,10 +18,11 @@ angular.module('drn.dashboard', ['hoodie'])
       };
 
 
+      $scope.edit = function (item) {
+        item.editMode = false;
+      };
+
       hoodieArray.bind($scope, 'items', 'item');
-
-
-      $scope.items.push(mock);
     }
 
 
