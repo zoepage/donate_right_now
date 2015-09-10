@@ -31,7 +31,7 @@
     <ul class="item-list">
         <li ng-repeat="item in items track by $index">
             <span ng-show="!editMode">
-                <span>{{item.quantity}}</span> <span>Helfer für "{{item.name}}"</span> im <span>{{item.location}}</span> bis <span> {{item.due}}</span>
+                <span>{{item.$public}}</span><span>{{item.quantity}}</span> <span>Helfer für "{{item.name}}"</span> im <span>{{item.location}}</span> bis <span> {{item.due}}</span>
             </span>
             <span ng-show="editMode">
                 <input type="number" ng-model="item.quantity">
